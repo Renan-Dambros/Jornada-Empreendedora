@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://qwcnxc4quxem"]
+
+[ext_resource type="Texture2D" uid="uid://c7saxydnkf0ad" path="res://fundo (1).png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dfan6x5w5shbk" path="res://inomeado.png" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://cu46jq1enl7tn" path="res://WhatsApp Image 2025-04-28 at 15.35.55 (2)-Photoroom.png" id="3_0hol4"]
+[ext_resource type="Texture2D" uid="uid://853dmd03vw12" path="res://imagem_2025-04-30_134405261.png" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://cy73ehultrd6s" path="res://Botão_Inicial.gd" id="5_q6r6c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnj0w"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdubu"]
+bg_color = Color(0.67499, 0.441278, 0.949675, 0.921569)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0677369, 0.280069, 0.638053, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.531713, 0.531713, 0.531713, 0.6)
+shadow_size = 5
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 650.0
+texture = ExtResource("1_wtcfe")
+expand_mode = 1
+
+[node name="Jornada Empreendedora" type="Sprite2D" parent="."]
+position = Vector2(581, 315)
+scale = Vector2(0.228427, 0.257708)
+texture = ExtResource("2_0e48y")
+
+[node name="Foguete Decolar" type="Sprite2D" parent="."]
+position = Vector2(444, 148)
+scale = Vector2(0.135156, 0.1375)
+texture = ExtResource("3_0hol4")
+
+[node name="Decolar" type="Sprite2D" parent="."]
+position = Vector2(645, 152)
+scale = Vector2(0.218116, 0.195103)
+texture = ExtResource("4_q6r6c")
+
+[node name="Botão_Inicial" type="Button" parent="."]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 389.0
+offset_right = 750.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(0.0666667, 0.278431, 0.639216, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_jnj0w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kdubu")
+text = "Iniciar"
+script = ExtResource("5_q6r6c")

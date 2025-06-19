@@ -1,0 +1,119 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3moyt3cgctq"]
+
+[ext_resource type="Script" uid="uid://djsxwu1dtoqvf" path="res://tela_sala.gd" id="1_n8hif"]
+
+[sub_resource type="Gradient" id="Gradient_wrwv2"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.434783, 0.991304)
+colors = PackedColorArray(0.121858, 0.0341535, 0.451564, 1, 0.240473, 0.164615, 0.525644, 1, 0.507603, 0.458425, 0.692478, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wrwv2"]
+gradient = SubResource("Gradient_wrwv2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8hif"]
+bg_color = Color(0.0728426, 0.0728426, 0.0728426, 0.431373)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1.58831e-06, 0.627228, 0.521228, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Tela_Sala" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n8hif")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1152.0
+offset_top = -3.0
+offset_right = 1807.0
+offset_bottom = 1149.0
+rotation = 1.5708
+texture = SubResource("GradientTexture1D_wrwv2")
+expand_mode = 1
+
+[node name="Criar_Sala" type="Button" parent="."]
+offset_left = 415.0
+offset_top = 163.0
+offset_right = 685.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0, 0.627451, 0.521569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_n8hif")
+text = "CRIAR SALA"
+
+[node name="Entra_Sala" type="Button" parent="."]
+offset_left = 418.0
+offset_top = 292.0
+offset_right = 688.0
+offset_bottom = 353.0
+theme_override_colors/font_color = Color(0, 0.627451, 0.521569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_n8hif")
+text = "ENTRAR EM UMA SALA"
+
+[node name="Voltar" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 418.0
+offset_right = 694.0
+offset_bottom = 479.0
+theme_override_colors/font_color = Color(0, 0.627451, 0.521569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_n8hif")
+text = "VOLTAR"
+
+[node name="Criar" type="Popup" parent="."]
+initial_position = 1
+size = Vector2i(300, 200)
+
+[node name="Nome_Criar_S" type="LineEdit" parent="Criar"]
+offset_left = 43.0
+offset_top = 18.0
+offset_right = 272.0
+offset_bottom = 58.0
+placeholder_text = "Nome da Sala"
+
+[node name="Senha_Criar_S" type="LineEdit" parent="Criar"]
+offset_left = 47.0
+offset_top = 77.0
+offset_right = 276.0
+offset_bottom = 117.0
+placeholder_text = "Senha da Sala"
+secret = true
+
+[node name="Criar" type="Button" parent="Criar"]
+offset_left = 92.0
+offset_top = 149.0
+offset_right = 230.0
+offset_bottom = 175.0
+text = "Criar"
+
+[node name="Entrar" type="Popup" parent="."]
+auto_translate_mode = 1
+initial_position = 1
+size = Vector2i(300, 200)
+
+[node name="Nome_Entrar_S" type="LineEdit" parent="Entrar"]
+offset_left = 43.0
+offset_top = 18.0
+offset_right = 272.0
+offset_bottom = 58.0
+placeholder_text = "Nome da Sala"
+
+[node name="Senha_Entrar_S" type="LineEdit" parent="Entrar"]
+offset_left = 47.0
+offset_top = 77.0
+offset_right = 276.0
+offset_bottom = 117.0
+placeholder_text = "Senha da Sala"
+
+[node name="Entrar" type="Button" parent="Entrar"]
+offset_left = 92.0
+offset_top = 149.0
+offset_right = 230.0
+offset_bottom = 175.0
+text = "Entrar"

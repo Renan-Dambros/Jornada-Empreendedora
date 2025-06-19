@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://pmtnqp0m3b08"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 2288.0
+offset_bottom = 708.0
+size_flags_horizontal = 3
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2

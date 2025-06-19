@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Jornada Empreendedora"
+run/main_scene="uid://qwcnxc4quxem"
+config/features=PackedStringArray("4.4", "Mobile")
+boot_splash/bg_color=Color(0, 0.8, 0.811765, 1)
+boot_splash/image="uid://dfan6x5w5shbk"
+config/icon="uid://cu46jq1enl7tn"
+boot_splash/minimum_display_time=5
+
+[autoload]
+
+Jogador="*res://jogador.gd"
+Sala="*res://sala.gd"
+Rede="*res://rede.gd"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
+window/main_scene="uid://qwcnxc4quxem"
+
+[filesystem]
+
+import/main_scene="uid://qwcnxc4quxem"
+import/image="uid://dfan6x5w5shbk"
+import/minimum_display_time=5
+import/icon="uid://cu46jq1enl7tn"
+import/bg_color=Color(0, 0.8, 0.811765, 1)
+import/stretch/aspect="ignore"
+import/stretch/mode="viewport"
+import/size/mode=2
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

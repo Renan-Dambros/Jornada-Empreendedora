@@ -1,0 +1,171 @@
+[gd_scene load_steps=8 format=3 uid="uid://diwnqqg60y1ib"]
+
+[ext_resource type="Script" uid="uid://bv2ehelo7wln6" path="res://sala_espera.gd" id="1_1vx73"]
+
+[sub_resource type="Gradient" id="Gradient_ar3pa"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.434783, 0.991304)
+colors = PackedColorArray(0.121858, 0.0341535, 0.451564, 1, 0.240473, 0.164615, 0.525644, 1, 0.507603, 0.458425, 0.692478, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c6yje"]
+gradient = SubResource("Gradient_ar3pa")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ar3pa"]
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(4.81307e-07, 0.618566, 0.538249, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbd7v"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vx73"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 0.431373)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1.58831e-06, 0.627228, 0.521228, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vknlx"]
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.724271, 0.72898, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Sala_Espera" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1vx73")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1152.0
+offset_top = -3.0
+offset_right = 1807.0
+offset_bottom = 1149.0
+rotation = 1.5708
+texture = SubResource("GradientTexture1D_c6yje")
+expand_mode = 1
+
+[node name="Label1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 199.0
+offset_right = 517.0
+offset_bottom = 279.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar3pa")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 197.0
+offset_right = 896.0
+offset_bottom = 277.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar3pa")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 304.0
+offset_right = 519.0
+offset_bottom = 384.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar3pa")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 299.0
+offset_right = 895.0
+offset_bottom = 379.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar3pa")
+
+[node name="Iniciar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 555.0
+offset_right = 674.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0, 0.627451, 0.521569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_dbd7v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vx73")
+text = "INICIAR
+"
+
+[node name="Esperando Jogadores" type="Label" parent="."]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 27.0
+offset_right = 736.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 30
+text = "ESPERANDO JOGADORES"
+
+[node name="Pronto" type="Button" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 556.0
+offset_right = 356.0
+offset_bottom = 617.0
+theme_override_colors/font_color = Color(0, 0.627451, 0.521569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_dbd7v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vx73")
+text = "Pronto
+"
+
+[node name="Sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 714.0
+offset_top = 555.0
+offset_right = 984.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0, 0.627451, 0.521569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_dbd7v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1vx73")
+text = "Sair
+"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 411.0
+offset_right = 896.0
+offset_bottom = 491.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar3pa")
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 410.0
+offset_right = 520.0
+offset_bottom = 490.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar3pa")
+
+[node name="ip" type="Label" parent="."]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 94.0
+offset_right = 697.0
+offset_bottom = 161.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_vknlx")
+horizontal_alignment = 1
+vertical_alignment = 1

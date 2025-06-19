@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://caf1vi6m04nph"]
+
+[ext_resource type="Script" uid="uid://baia2ixgorwgy" path="res://teste_2.gd" id="1_niwfp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_niwfp")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 106.0
+offset_right = 518.0
+offset_bottom = 215.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 245.0
+offset_right = 524.0
+offset_bottom = 359.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 111.0
+offset_right = 915.0
+offset_bottom = 214.0
+text = "criar "
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 267.0
+offset_right = 898.0
+offset_bottom = 353.0
+text = "entrar"

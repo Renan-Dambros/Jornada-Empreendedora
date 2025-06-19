@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://2l3v7jnumcil"]
+
+[ext_resource type="Script" uid="uid://cuebh21ixlat6" path="res://parallax_background.gd" id="1_oaxax"]
+[ext_resource type="Script" uid="uid://dtcu6taw65o48" path="res://path_2d.gd" id="2_06tow"]
+[ext_resource type="Script" uid="uid://b54jw2tvjkt37" path="res://polygon_2d.gd" id="3_n17d0"]
+
+[sub_resource type="Gradient" id="Gradient_if7or"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.434783, 0.991304)
+colors = PackedColorArray(0.121858, 0.0341535, 0.451564, 1, 0.240473, 0.164615, 0.525644, 1, 0.507603, 0.458425, 0.692478, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rklea"]
+gradient = SubResource("Gradient_if7or")
+
+[sub_resource type="Curve2D" id="Curve2D_swkqp"]
+_data = {
+"points": PackedVector2Array(40, 50, 0, 0, 129, 437, 0, 0, 0, 0, 398, 247, 0, 0, 0, 0, 574, 551, 0, 0, 0, 0, 212, 610, 0, 0, 0, 0, 129, 437)
+}
+point_count = 5
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_06tow"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_oaxax")
+
+[node name="Parallax2D" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/Parallax2D"]
+offset_left = 2057.0
+offset_top = -3.0
+offset_right = 2712.0
+offset_bottom = 2054.0
+rotation = 1.5708
+texture = SubResource("GradientTexture1D_rklea")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="ParallaxBackground/Parallax2D"]
+offset_left = 791.0
+offset_top = 190.0
+offset_right = 1420.0
+offset_bottom = 291.0
+
+[node name="Path2D" type="Path2D" parent="ParallaxBackground/Parallax2D"]
+curve = SubResource("Curve2D_swkqp")
+script = ExtResource("2_06tow")
+
+[node name="Polygon2D" type="Polygon2D" parent="ParallaxBackground/Parallax2D/Path2D"]
+texture = SubResource("CanvasTexture_06tow")
+script = ExtResource("3_n17d0")
+
+[node name="Line2D" type="Line2D" parent="ParallaxBackground/Parallax2D/Path2D"]
+width = 100.0
+default_color = Color(0, 0, 0, 1)
+antialiased = true

@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://cf71sf7hmeeuc"]
+
+[ext_resource type="Script" uid="uid://brufi8hw5r8ai" path="res://tela_nome.gd" id="1_ujlfc"]
+
+[sub_resource type="Gradient" id="Gradient_wrwv2"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.434783, 0.991304)
+colors = PackedColorArray(0.121858, 0.0341535, 0.451564, 1, 0.240473, 0.164615, 0.525644, 1, 0.507603, 0.458425, 0.692478, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wrwv2"]
+gradient = SubResource("Gradient_wrwv2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pat0s"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8hif"]
+bg_color = Color(0.0728426, 0.0728426, 0.0728426, 0.431373)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1.58831e-06, 0.627228, 0.521228, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 9
+shadow_color = Color(0.0745098, 0.0745098, 0.0745098, 0.431373)
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujlfc"]
+content_margin_left = 30.0
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.627451, 0.521569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Tela_Nome" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ujlfc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1152.0
+offset_top = -3.0
+offset_right = 1807.0
+offset_bottom = 1149.0
+rotation = 1.5708
+texture = SubResource("GradientTexture1D_wrwv2")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 344.0
+offset_right = 694.0
+offset_bottom = 405.0
+theme_override_colors/font_color = Color(0, 0.627451, 0.521569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_pat0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_n8hif")
+text = "PRÓXIMO"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 169.0
+offset_right = 772.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ujlfc")
+placeholder_text = "Insira seu nome"
+max_length = 20
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
